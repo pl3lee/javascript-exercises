@@ -1,5 +1,5 @@
-const removeFromArray = function() {
-
+const removeFromArray = function(array, element) {
+    let index = array.indexof(element)
 };
 
 // Do not edit below this line
