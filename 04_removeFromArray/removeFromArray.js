@@ -1,6 +1,16 @@
 const removeFromArray = function(array, element) {
-    let index = array.indexof(element)
+    let elementsRemove = Array.from(arguments);
+    elementsRemove.splice(0, 1);
+    len = elementsRemove.length
+    for (let i = 0; i < len; i++) {
+        let newArray = array.filter(function(arrayElement) {
+            if (arrayElement !== elementsRemove[i]) {
+                return true;
+            }
+        });
+        array = newArray;
+    }
+    return array;
 };
 
-// Do not edit below this line
 module.exports = removeFromArray;
